@@ -1,0 +1,45 @@
+import pandas as pd
+import numpy as np
+from itertools import islice
+
+
+def num_generator():
+    prev = 10000
+    while True:
+        yield prev
+        prev = prev + np.random.randint(1000, 5000)
+
+
+ngen = num_generator()
+ngen1 = num_generator()
+ngen2 = num_generator()
+ngen3 = num_generator()
+ngen4 = num_generator()
+# num_list = list(islice(ngen, 0, 10))
+# s = pd.Series(list(islice(ngen, 0, 365)))
+
+# print(num_list)
+
+# country_list = ['China', 'Amarica', 'Russia', 'Japan', 'England',
+#                 'Span', 'Italy', 'Mexico', 'Canada', 'German',
+#                 'France', 'Australia', 'Newziland', 'Brazil', 'Poland']
+
+dates = pd.date_range(start='20190101', end='20191231', freq='D')
+
+df0 = pd.DataFrame({'name': '人口', 'type': 'China',
+                    'value': pd.Series(list(islice(ngen, 0, 365))), 'date': dates})
+df1 = pd.DataFrame({'name': 'people', 'type': 'Amarica',
+                    'value': pd.Series(list(islice(ngen1, 0, 365))), 'date': dates})
+df2 = pd.DataFrame({'name': 'num2', 'type': 'Russia',
+                    'value': pd.Series(list(islice(ngen2, 0, 365))), 'date': dates})
+df3 = pd.DataFrame({'name': 'goods', 'type': 'Japan',
+                    'value': pd.Series(list(islice(ngen3, 0, 365))), 'date': dates})
+df4 = pd.DataFrame({'name': 'chips', 'type': 'England',
+                    'value': pd.Series(list(islice(ngen4, 0, 365))), 'date': dates})
+
+df = pd.concat([df0, df1, df2, df3, df4], ignore_index=True)
+
+# print(df.tail())
+# print(df.info())
+# df.to_csv('country_ranking_data_15.csv')
+df.to_csv('~/GitHub/Historical-ranking-data-visualization-based-on-d3.js/src/country_ranking_data_15.csv')
