@@ -46,7 +46,7 @@ def main():
     for i in range(int(num)):
         # 创建目录用于下载
         # path = 'F:\\图片文件\\高清壁纸\\第{}页\\'.format(i + 1)
-        path = "$HOME/.wallpapers/netBianPic".format(i + 1)
+        path = "/home/hxm/.wallpapers/netBianPic".format(i + 1)
         if not os.path.exists(path):
             os.makedirs(path)
         # 改变当前工作目录
@@ -63,4 +63,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
