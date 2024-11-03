@@ -2,7 +2,7 @@ import calendar
 import os
 
 # Define the path and months
-path = "/home/hxm/test/mds"
+PATH = "/home/hxm/test/mds"
 months = [
     "01_January",
     "02_February",
@@ -19,7 +19,7 @@ months = [
 ]
 
 # Create the directory if it doesn't exist
-os.makedirs(path, exist_ok=True)
+os.makedirs(PATH, exist_ok=True)
 
 # Get the year
 YEAR = 2024
@@ -27,7 +27,7 @@ YEAR = 2024
 for month_index, month in enumerate(months, start=1):
     # Create filename
     FILENAME = f"{YEAR}_{month}.md"
-    file_path = os.path.join(path, FILENAME)
+    file_path = os.path.join(PATH, FILENAME)
 
     # Get the number of days in the month
     num_days = calendar.monthrange(YEAR, month_index)[1]
@@ -46,10 +46,12 @@ for month_index, month in enumerate(months, start=1):
         week_number = (day_of_year - 1) // 7 + 1
 
         # Format the date string
-        date_str = f"## {YEAR}/{month_index:02}/{day:02} {day_name}. day{day_of_year:03} week{week_number:02}"
+        date_str = f"## {YEAR}/{month_index:02}/{day:02} {day_name}. \
+                day{day_of_year:03} week{week_number:02}"
 
         # Write to the file
         with open(file_path, "a", encoding="utf-8") as file:
-            file.write(date_str + "\n")  # Followed by three blank lines
+            # file.write(date_str + "\n\n\n\n")  # Followed by three blank lines
+            file.write(date_str + "\n")
 
 print("Markdown files generated successfully.")
