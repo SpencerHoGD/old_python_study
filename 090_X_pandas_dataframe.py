@@ -19,7 +19,7 @@ HALF_NUM = INDEX_NUM // 2
 col_num = list(string.ascii_uppercase)[:HALF_NUM]
 WORD1 = "\n Hello world! \n"
 
-dates = pd.date_range("20241101", periods=INDEX_NUM, freq="H")
+dates = pd.date_range("20241101", periods=INDEX_NUM, freq="h")
 df = pd.DataFrame(np.random.randn(INDEX_NUM, HALF_NUM), index=dates, columns=col_num)
 
 result = df
@@ -42,6 +42,6 @@ result = df
 # result = df.iloc[[1, 2, 4], [0, 2]]
 # result = df[df.A > 0]
 # result = df[df > 0]
-# result.to_csv(path.join(d, "pandas_dataframe_csv.csv"))
+result.to_csv(path.join(d, "pandas_dataframe_csv.csv"))
 # result.to_excel(path.join(d, "pandas_dataframe_excel.xls"))
-print(result)
+# print(result)
