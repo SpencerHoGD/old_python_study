@@ -40,17 +40,22 @@ class Point(object):
         return sqrt(dx**2 + dy**2)
 
     def __str__(self):
-        return "(%s, %s)" % (str(self.x), str(self.y))
+        # return "(%s, %s)" % (str(self.x), str(self.y))
+        return f"{str(self.x), str(self.y)}"
 
 
 def main():
+    """main"""
     p1 = Point(3, 5)
     p2 = Point()
-    print(p1)
-    print(p2)
+    print(f"p1 is {p1}")
+    print(f"p2 is {p2}")
     p2.move_by(-1, 2)
-    print(p2)
-    print(p1.distance_to(p2))
+    print(f"Moved p2 is {p2}")
+    print(f"Distance between p1 and p2 is {p1.distance_to(p2)}")
+    p2.move_to(-5, 7)
+    print(f"Moved p2 is {p2}")
+    print(f"Distance between p1 and p2 is {p1.distance_to(p2):.2f}")
 
 
 if __name__ == "__main__":
