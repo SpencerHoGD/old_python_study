@@ -24,23 +24,23 @@ now = datetime.now()
 #     + now.strftime("%W")
 # )
 
-for month in monthes:
-    print(month)
+# for month in monthes:
+#     print(month)
 
 #     with open(f"{PATH}/{month}.md", "w", encoding="utf-8") as fp:
 #         fp.write(f"hello, pathlib {month}")
 #
-# with open(FILENAME4, "w", encoding="utf-8") as f:
-#     for date in dates:
-#         f.write(
-#             "## "
-#             + date.strftime("%Y/%m/%d %a")
-#             + ". day"
-#             + date.strftime("%j")
-#             + " week"
-#             + date.strftime("%W")
-#             + "\n"
-#             + "\n"
-#             + "\n"
-#             + "\n"
-#         )
+with open(FILENAME4, "w", encoding="utf-8") as f:
+    for date in dates:
+        f.write(
+            "## "
+            + date.strftime("%Y/%m/%d %a")
+            + ". day"
+            + date.strftime("%j")
+            + " week"
+            + date.strftime("%W")
+            + "\n"
+            + "\n"
+            + "\n"
+            + "\n"
+        )
