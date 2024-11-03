@@ -1,10 +1,9 @@
 import math
 import time
 
-"""
-7.7 seconds
-2.272 sec lian-arch
-"""
+# 7.7 seconds
+# 2.272 sec lian-arch
+# arch-hxm: 2.671 seconds
 
 
 def is_prime(n):
@@ -27,9 +26,10 @@ start = time.time()
 #     if is_prime(num):
 #         print(num, end=' ')
 
-for num in range(2, 2000000):
+N = 2 * 10**7
+for num in range(2, N):
     if is_prime(num):
         pass
 
 end = time.time()
-print('Took %.3f seconds.' % (end - start))
+print("Took %.3f seconds." % (end - start))

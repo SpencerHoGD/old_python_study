@@ -9,6 +9,7 @@
 
 
 def main():
+    """main"""
     persons = [True] * 30
     counter, index, number = 0, 0, 0  # counter:被丢之人计数，index：列表索引
     while counter < 15:
@@ -22,10 +23,10 @@ def main():
         index += 1
         index %= 30
     for person in persons:
-        print('基' if person else '0', end='')
+        print("基" if person else "0 ", end="")
 
     print()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
