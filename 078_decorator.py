@@ -1,4 +1,3 @@
-import os
 import logging
 
 
@@ -11,10 +10,10 @@ def use_logging(level):
             elif level == "info":
                 logging.info("%s is running" % func.__name__)
             return func(*args, **kwargs)
+
         return wrapper
 
     return decorator
-
 
 
 @use_logging(level="info")
@@ -22,11 +21,10 @@ def foo(name="foo"):
     print("i am %s" % name)
 
 
-
 def decUpper(func):
     pass
 
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     foo()
+

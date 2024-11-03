@@ -39,7 +39,7 @@ def getVCodeDir():
     return os.path.join(getTmpDir(), "vcode")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # d = getWorkDir()
     # print(d)
     getTmpDir()
