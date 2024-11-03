@@ -54,4 +54,3 @@ if __name__ == "__main__":
     # mulThread()
     # mulProcess()
     cProfile.run("mulProcess()")
-
