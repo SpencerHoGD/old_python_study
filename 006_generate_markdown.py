@@ -49,7 +49,7 @@ for month_index, month in enumerate(months, start=1):
         date_str = f"## {YEAR}/{month_index:02}/{day:02} {day_name}. day{day_of_year:03} week{week_number:02}"
 
         # Write to the file
-        with open(file_path, "a", encoding="urf-8") as file:
+        with open(file_path, "a", encoding="utf-8") as file:
             file.write(date_str + "\n")  # Followed by three blank lines
 
 print("Markdown files generated successfully.")
