@@ -1,4 +1,4 @@
-from time import time, localtime, sleep
+from time import localtime, sleep, time
 
 
 class Clock(object):
@@ -11,6 +11,7 @@ class Clock(object):
 
     @classmethod
     def now(cls):
+        """now"""
         ctime = localtime(time())
         return cls(ctime.tm_hour, ctime.tm_min, ctime.tm_sec)
 
@@ -28,8 +29,7 @@ class Clock(object):
 
     def show(self):
         """显示时间"""
-        return '%02d:%02d:%02d' % \
-               (self._hour, self._minute, self._second)
+        return "%02d:%02d:%02d" % (self._hour, self._minute, self._second)
 
 
 def main():
@@ -41,5 +41,6 @@ def main():
         clock.run()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
+
