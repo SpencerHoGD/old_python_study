@@ -1,5 +1,5 @@
-from time import time, sleep
-from threading import Thread, Lock
+from threading import Lock, Thread
+from time import sleep, time
 
 
 class Account(object):
@@ -44,11 +44,12 @@ def main():
         t.start()
     for t in threads:
         t.join()
-    print('账户余额为: ￥%d元' % account.balance)
+    print(f"账户余额为: ￥ {account.balance:d} 元")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     start = time()
     main()
     end = time()
-    print('Took %.3f seconds!' % (end - start))
+    print(f"Took {end - start:.3f} seconds!")
+
