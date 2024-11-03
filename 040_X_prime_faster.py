@@ -2,11 +2,12 @@ import time
 
 # from timeit import timeit
 # 1.96 seconds
-# arch-hxm: 0.556 seconds
+# hxm-arch: 2 * 10**6 : 0.556 seconds
+# hxm-arch: 2 * 10**8 : 63.036 seconds
 
 start = time.time()
 
-N = 2 * 10**6
+N = 2 * 10**8
 SUM = 0
 prime = []
 for i in range(N + 1):

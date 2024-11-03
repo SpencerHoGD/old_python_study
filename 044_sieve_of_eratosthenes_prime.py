@@ -1,8 +1,11 @@
+# from concurrent.futures import Executor, ProcessPoolExecutor, ThreadPoolExecutor
+
 from dectimeit import get_time
 
 # hxm-arch: 2 * 10**8 : sieve_of_eratosthene 12.694 seconds
-# hxm-arch: 2 * 10**6 : sieve_of_eratosthene s0.117 seconds
 # hxm-arch: 2 * 10**7 : sieve_of_eratosthene 1.226 seconds
+# hxm-arch: 2 * 10**6 : sieve_of_eratosthene 0.117 seconds
+
 # hxm-arch: 2 * 10**7 : linear_sieve         2.444 seconds
 
 
@@ -51,4 +54,3 @@ if __name__ == "__main__":
     N = 2 * 10**7
     sieve_of_eratosthenes(N)
     # linear_sieve(N)  # slower 1 times
-
