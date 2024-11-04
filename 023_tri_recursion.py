@@ -11,4 +11,4 @@ def tri_recursion(k):
 
 
 print("Recursion Example Results:")
-tri_recursion(6)
+tri_recursion(20)
