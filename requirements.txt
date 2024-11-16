@@ -5,3 +5,4 @@ lxml
 tornado
 pillow
 matplotlib
+seaborn
